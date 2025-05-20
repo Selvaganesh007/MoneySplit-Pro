@@ -5,3 +5,49 @@ $primaryFontColor: white;
 $secondaryFontColor: black;
 
 $navbarHeight: 8vh;
+
+@mixin linkTag {
+  a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid $primaryColor;
+    width: 90px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  a:hover {
+    background-color: $primaryColor;
+    border: 2px solid white;
+    color: black;
+    font-weight: 900;
+  }
+}
+
+.ant-drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ant-drawer-wrapper-body {
+  background-color: $secondaryColor;
+  color: $primaryColor;
+}
+.ant-drawer-title{
+  color: $primaryColor !important;
+}
+.ant-input, .ant-input-password {
+  background-color: $secondaryColor;
+  color: $primaryColor !important;
+  border-color: $primaryColor;
+}
+.ant-input::placeholder {
+  color: white ;
+}
+.anticon svg {
+  color: red ;
+}
+.ant-btn-default {
+  background-color: $secondaryColor;
+  color: white;
+}

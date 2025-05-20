@@ -1,9 +1,9 @@
 import React from 'react';
 import './GroupCard.scss';
 
-const GroupCard = ({value: {group_name, group_members}}) => {
+const GroupCard = ({value: {group_name, group_id, group_members}, handleCardClick}) => {
   return (
-    <div className='groupCard'>
+    <div className='groupCard' onClick={() => handleCardClick(group_id)}>
       <div className='groupCard_header'>
         <h3>{group_name.toUpperCase()}</h3>
       </div>

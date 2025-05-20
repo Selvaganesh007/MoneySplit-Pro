@@ -29,31 +29,3 @@
     }
   }
 }
-
-.ant-drawer-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.ant-drawer-wrapper-body {
-  background-color: $secondaryColor;
-  color: $primaryColor;
-}
-.ant-drawer-title{
-  color: $primaryColor !important;
-}
-.ant-input {
-  background-color: $secondaryColor;
-  color: $primaryColor !important;
-  border-color: $primaryColor;
-}
-.ant-input::placeholder {
-  color: white ;
-}
-.anticon svg {
-  color: red ;
-}
-.ant-btn-default {
-  background-color: $secondaryColor;
-  color: white;
-}

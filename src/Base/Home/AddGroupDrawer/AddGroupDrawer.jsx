@@ -30,12 +30,21 @@ const AddGroupDrawer = ({drawerOpen, setDrawerOpen}) => {
   }
 
   const handleAddNewGroup = () => {
-    dispatch({ type: "AddNewGroup", payload: groupDetail });
-    handleDrawerClose();
+    if (groupDetail.group_name !== '' && groupDetail.group_members.length >= 3) {
+      dispatch({ type: "AddNewGroup", payload: groupDetail });
+      handleDrawerClose();
+    } else {
+      alert('Kindly fill the all mandatory fields. Make sure 3 members add necessary');
+    }
   }
 
   const handleAddMember = () => {
-    const value = {member_name: memberName, member_id: Math.floor(Math.random() * 100)}
+    const value = {
+      member_name: memberName, 
+      member_id: groupDetail.group_members.length + 1,
+      borrowed_amount: 0,
+      owned_amount: 0,
+    }
     handleGroupDetail(value, 'group_members');
     setMemberName('');
   }

@@ -45,6 +45,10 @@ $groupDetailheaderHeight: 20vh;
       position: sticky;
       top: calc($groupDetailheaderHeight + $navbarHeight);
       background-color: $secondaryColor;
+      .groupDetails_body_header_actions {
+        display: flex;
+        gap: 30px;
+      }
     }
     .groupDetails_expence_cards {
       padding: 0 20px;
